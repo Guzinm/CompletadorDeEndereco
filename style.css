@@ -64,8 +64,10 @@ header {
 header > button {
     margin: 15px;
     padding: 10px;
+    appearance: none;
 
     background-color: rgb(90, 90, 90);
+    border-color: #b094df;
 
     font-weight: bolder;
 
@@ -90,6 +92,8 @@ header > button::after {
 
 button.Temalight {
     background-color: rgb(255, 255, 255);
+    border-color: #111111;
+    appearance: none;
 
 }
 

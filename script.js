@@ -24,28 +24,29 @@ document.getElementById("CEP").addEventListener("blur", (evento) => {
 
 })
 
+function mudarTema() {
+    document.body.classList.toggle("light");
+    document.getElementById("formulario").classList.toggle("light");
+    document.getElementById("botaoEnvio").classList.toggle("light");
+    document.getElementById("mode").classList.toggle("Temalight");
+};
+
 document.getElementById("mode").addEventListener("click", () => {
 
     const TemaAtual = localStorage.getItem("tema");
     const NovoTema = TemaAtual === "dark" ? "light" : "dark";
     localStorage.setItem("tema", NovoTema);
 
-    document.body.classList.toggle("light");
-    document.getElementById("formulario").classList.toggle("light");
-    document.getElementById("botaoEnvio").classList.toggle("light");
-    document.getElementById("mode").classList.toggle("Temalight");
+    mudarTema()
 
-})
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const TemaSalvo = localStorage.getItem("tema");
 
     if (TemaSalvo === 'light') {
-        document.body.classList.toggle("light");
-        document.getElementById("formulario").classList.toggle("light");
-        document.getElementById("botaoEnvio").classList.toggle("light");
-        document.getElementById("mode").classList.toggle("Temalight");
+        mudarTema()
     }
 
-})
+});
